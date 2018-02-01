@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="page-header">
+			<h1>Pedidos</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<button ng-click="pedidoRecord();" class="btn btn-lg btn-primary">New Pedido</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Cliente</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="pedido in pedidos">
+					<td>{{pedido.cliente}}</td>
+					<td><button ng-click="pedidoRecord(pedido._id)" class="btn btn-sm btn-primary">Editar</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

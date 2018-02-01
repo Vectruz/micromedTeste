@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-lg-12">
+		<div class="page-header">
+			<h1>Produtos</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<button ng-click="produtoRecord();" class="btn btn-lg btn-primary">Novo Produto</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Descrição</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="produto in produtos">
+					<td>{{produto.descricao}}</td>
+					<td><button ng-click="produtoRecord(produto._id)" class="btn btn-sm btn-primary">Editar</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
